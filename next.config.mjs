@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+	webpack: config => {
+		config.module.rules.push({
+			test: /\.(png|jpg|gif)$/i,
+			use: [
+				{
+					loader: "url-loader",
+					options: {
+						limit: 8192,
+					},
+				},
+			],
+		})
 
-export default nextConfig;
+		return config
+	},
+}
+
+export default nextConfig

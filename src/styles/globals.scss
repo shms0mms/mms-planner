@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./base";
+body {
+	background: linear-gradient(114.21deg, #232323 20.08%, #000000 96.12%),
+		linear-gradient(114.21deg, #ffffff 20.08%, #dfe2e4 96.12%);
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url("/decor.png") 0 0 / cover no-repeat;
+		width: 30%;
+		height: 45%;
+		z-index: -10;
+	}
+}
