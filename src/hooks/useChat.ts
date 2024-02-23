@@ -1,5 +1,5 @@
 import { IMessage } from "@/interfaces/messages.interface"
-import { useEffect, useState } from "react"
+import { ChangeEvent, useEffect, useState } from "react"
 import { io } from "socket.io-client"
 
 const socket = io("ws://localhost:3000/chat")
@@ -15,14 +15,11 @@ const useChat = () => {
 		}
 	}, [])
 
-	const handleInputChange = e => {
-		setInputValue(e.target.value)
-	}
+	const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {}
 
 	const sendMessage = () => {
-		if (inputValue.trim() !== "") {
-			socket.emit("chat message", inputValue)
-			setInputValue("")
+		if ("".trim() !== "") {
+			socket.emit("chat message", "")
 		}
 	}
 	return {}
