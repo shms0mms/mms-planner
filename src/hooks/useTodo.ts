@@ -8,7 +8,7 @@ const useTodo = () => {
 	const getAll = () => {
 		return useQuery<AxiosResponse<ITodo[]>, undefined, ITodo[]>({
 			queryKey: [keys.todos],
-			queryFn: todoService.getAll,
+			queryFn: () => todoService.getAll(),
 		})
 	}
 	return { getAll }
