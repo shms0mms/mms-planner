@@ -1,4 +1,5 @@
 import { AppContext } from "@/context/AppContext"
+import useChat from "@/hooks/useChat"
 import useContext from "@/hooks/useContext"
 import { FC, useEffect } from "react"
 const Messages: FC = ({}) => {
@@ -6,7 +7,12 @@ const Messages: FC = ({}) => {
 	useEffect(() => {
 		setIsDecreased(true)
 	}, [!isDecreased])
-	return <></>
+	const {} = useChat()
+	return (
+		<>
+			<div>Messages </div>
+		</>
+	)
 }
 
 export default Messages

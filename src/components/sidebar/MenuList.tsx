@@ -42,7 +42,7 @@ const MenuList: FC = ({}) => {
 			id: 5,
 			icon: <Book width={size} height={size} />,
 			text: "Задачи",
-			href: routes.tasks,
+			href: routes["all-todos"],
 		},
 	] as IMenuListItem[]
 	return (

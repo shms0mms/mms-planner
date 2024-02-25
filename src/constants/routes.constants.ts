@@ -4,5 +4,6 @@ export const routes = {
 	login: "/login",
 	register: "/register",
 	messages: "/messages",
-	tasks: "/tasks",
+	"all-todos": "/todo/all",
+	todo: "/todo",
 }
