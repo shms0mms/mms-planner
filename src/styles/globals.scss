@@ -17,3 +17,12 @@ body {
 		z-index: -10;
 	}
 }
+
+.border {
+	&-bottom {
+		@apply border-[0px] border-solid border-b-[1px]  border-b-[#292929];
+	}
+	&-right {
+		@apply border-[0px] border-solid border-r-[1px] border-r-[#292929];
+	}
+}

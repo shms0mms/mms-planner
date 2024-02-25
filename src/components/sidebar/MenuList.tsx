@@ -1,9 +1,9 @@
 import { routes } from "@/constants/routes.constants"
-import { Home, MessageCircle, Timer } from "lucide-react"
+import { Book, Home, MessageCircle, Timer, User } from "lucide-react"
 import { FC, ReactNode } from "react"
 import MenuListItem from "./MenuListItem"
-import useContext from "@/hooks/useContext"
 import { AppContext } from "@/context/AppContext"
+import useContext from "@/hooks/useContext"
 export interface IMenuListItem {
 	href?: string
 	icon: ReactNode
@@ -31,6 +31,18 @@ const MenuList: FC = ({}) => {
 			icon: <MessageCircle width={size} height={size} />,
 			text: "Переписки",
 			href: routes.messages,
+		},
+		{
+			id: 4,
+			icon: <User width={size} height={size} />,
+			text: "Регистрация",
+			href: routes.register,
+		},
+		{
+			id: 5,
+			icon: <Book width={size} height={size} />,
+			text: "Задачи",
+			href: routes.tasks,
 		},
 	] as IMenuListItem[]
 	return (

@@ -4,4 +4,5 @@ export const routes = {
 	login: "/login",
 	register: "/register",
 	messages: "/messages",
+	tasks: "/tasks",
 }
