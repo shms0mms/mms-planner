@@ -6,7 +6,7 @@ import { AxiosResponse } from "axios"
 
 const useTodo = () => {
 	const getAll = () => {
-		return useQuery<AxiosResponse<ITodo[]>, undefined, ITodo[]>({
+		return useQuery<AxiosResponse<ITodo[]>, undefined, AxiosResponse<ITodo[]>>({
 			queryKey: [keys.todos],
 			queryFn: () => todoService.getAll(),
 		})
